@@ -17,6 +17,7 @@
 		1E129A8F25BB91AB00CEAF18 /* Owner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E129A8C25BB91AB00CEAF18 /* Owner.swift */; };
 		1E129A9025BB91AB00CEAF18 /* Repo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E129A8D25BB91AB00CEAF18 /* Repo.swift */; };
 		1E129A9125BB91AB00CEAF18 /* License.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E129A8E25BB91AB00CEAF18 /* License.swift */; };
+		1E129A9525BBA71300CEAF18 /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E129A9425BBA71300CEAF18 /* UIView+Extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +45,7 @@
 		1E129A8C25BB91AB00CEAF18 /* Owner.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Owner.swift; sourceTree = "<group>"; };
 		1E129A8D25BB91AB00CEAF18 /* Repo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Repo.swift; sourceTree = "<group>"; };
 		1E129A8E25BB91AB00CEAF18 /* License.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = License.swift; sourceTree = "<group>"; };
+		1E129A9425BBA71300CEAF18 /* UIView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,6 +87,8 @@
 		1E129A6125BB7BD700CEAF18 /* FacebookRepositories */ = {
 			isa = PBXGroup;
 			children = (
+				1ED8A4D225BC6A43008138BE /* Network */,
+				1E129A9225BBA66600CEAF18 /* Helpers */,
 				1E129A6225BB7BD700CEAF18 /* AppDelegate.swift */,
 				1E129A6425BB7BD700CEAF18 /* SceneDelegate.swift */,
 				1E129A8B25BB913A00CEAF18 /* Models */,
@@ -114,6 +118,29 @@
 				1E129A8D25BB91AB00CEAF18 /* Repo.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		1E129A9225BBA66600CEAF18 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				1E129A9325BBA67F00CEAF18 /* UI */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		1E129A9325BBA67F00CEAF18 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				1E129A9425BBA71300CEAF18 /* UIView+Extension.swift */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		1ED8A4D225BC6A43008138BE /* Network */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Network;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -218,6 +245,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1E129A6725BB7BD700CEAF18 /* ViewController.swift in Sources */,
+				1E129A9525BBA71300CEAF18 /* UIView+Extension.swift in Sources */,
 				1E129A8F25BB91AB00CEAF18 /* Owner.swift in Sources */,
 				1E129A9025BB91AB00CEAF18 /* Repo.swift in Sources */,
 				1E129A6325BB7BD700CEAF18 /* AppDelegate.swift in Sources */,
