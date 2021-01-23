@@ -18,6 +18,9 @@
 		1E129A9025BB91AB00CEAF18 /* Repo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E129A8D25BB91AB00CEAF18 /* Repo.swift */; };
 		1E129A9125BB91AB00CEAF18 /* License.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E129A8E25BB91AB00CEAF18 /* License.swift */; };
 		1E129A9525BBA71300CEAF18 /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E129A9425BBA71300CEAF18 /* UIView+Extension.swift */; };
+		1E2BF9D025BC9DFA00592786 /* FBRepositoriesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E2BF9CF25BC9DFA00592786 /* FBRepositoriesViewController.swift */; };
+		1E2BF9D525BCA0D500592786 /* FBRepositoriesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E2BF9D425BCA0D500592786 /* FBRepositoriesViewModel.swift */; };
+		1E2BF9D925BCA12C00592786 /* Dynamic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E2BF9D825BCA12C00592786 /* Dynamic.swift */; };
 		1ED8A50E25BC7788008138BE /* ErrorHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ED8A50D25BC7788008138BE /* ErrorHandler.swift */; };
 		1ED8A51225BC7CC5008138BE /* APIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ED8A51125BC7CC4008138BE /* APIManager.swift */; };
 		1ED8A51825BC7D09008138BE /* RequestManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ED8A51725BC7D09008138BE /* RequestManager.swift */; };
@@ -52,6 +55,9 @@
 		1E129A8D25BB91AB00CEAF18 /* Repo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Repo.swift; sourceTree = "<group>"; };
 		1E129A8E25BB91AB00CEAF18 /* License.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = License.swift; sourceTree = "<group>"; };
 		1E129A9425BBA71300CEAF18 /* UIView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
+		1E2BF9CF25BC9DFA00592786 /* FBRepositoriesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FBRepositoriesViewController.swift; sourceTree = "<group>"; };
+		1E2BF9D425BCA0D500592786 /* FBRepositoriesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FBRepositoriesViewModel.swift; sourceTree = "<group>"; };
+		1E2BF9D825BCA12C00592786 /* Dynamic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dynamic.swift; sourceTree = "<group>"; };
 		1ED8A50D25BC7788008138BE /* ErrorHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorHandler.swift; sourceTree = "<group>"; };
 		1ED8A51125BC7CC4008138BE /* APIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIManager.swift; sourceTree = "<group>"; };
 		1ED8A51725BC7D09008138BE /* RequestManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestManager.swift; sourceTree = "<group>"; };
@@ -107,14 +113,14 @@
 		1E129A6125BB7BD700CEAF18 /* FacebookRepositories */ = {
 			isa = PBXGroup;
 			children = (
-				1ED8A51F25BC8309008138BE /* Repos */,
 				1E129A6225BB7BD700CEAF18 /* AppDelegate.swift */,
 				1E129A6425BB7BD700CEAF18 /* SceneDelegate.swift */,
 				1E129A9225BBA66600CEAF18 /* Helpers */,
 				1ED8A4D225BC6A43008138BE /* Network */,
+				1ED8A51F25BC8309008138BE /* Repos */,
 				1E129A8B25BB913A00CEAF18 /* Models */,
+				1E2BF9CD25BC9D6100592786 /* Epics */,
 				1E129A6625BB7BD700CEAF18 /* ViewController.swift */,
-				1E129A6825BB7BD700CEAF18 /* Main.storyboard */,
 				1E129A6B25BB7BDF00CEAF18 /* Assets.xcassets */,
 				1E129A6D25BB7BDF00CEAF18 /* LaunchScreen.storyboard */,
 				1E129A7025BB7BDF00CEAF18 /* Info.plist */,
@@ -145,6 +151,7 @@
 			isa = PBXGroup;
 			children = (
 				1E129A9325BBA67F00CEAF18 /* UI */,
+				1E2BF9D825BCA12C00592786 /* Dynamic.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -155,6 +162,32 @@
 				1E129A9425BBA71300CEAF18 /* UIView+Extension.swift */,
 			);
 			path = UI;
+			sourceTree = "<group>";
+		};
+		1E2BF9CD25BC9D6100592786 /* Epics */ = {
+			isa = PBXGroup;
+			children = (
+				1E2BF9D325BCA02700592786 /* Home */,
+			);
+			path = Epics;
+			sourceTree = "<group>";
+		};
+		1E2BF9CE25BC9DAF00592786 /* FBRepositories */ = {
+			isa = PBXGroup;
+			children = (
+				1E2BF9CF25BC9DFA00592786 /* FBRepositoriesViewController.swift */,
+				1E2BF9D425BCA0D500592786 /* FBRepositoriesViewModel.swift */,
+			);
+			path = FBRepositories;
+			sourceTree = "<group>";
+		};
+		1E2BF9D325BCA02700592786 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				1E129A6825BB7BD700CEAF18 /* Main.storyboard */,
+				1E2BF9CE25BC9DAF00592786 /* FBRepositories */,
+			);
+			path = Home;
 			sourceTree = "<group>";
 		};
 		1ED8A4D225BC6A43008138BE /* Network */ = {
@@ -366,11 +399,14 @@
 				1ED8A52125BC840E008138BE /* FBRepo.swift in Sources */,
 				1E129A6725BB7BD700CEAF18 /* ViewController.swift in Sources */,
 				1E129A9525BBA71300CEAF18 /* UIView+Extension.swift in Sources */,
+				1E2BF9D925BCA12C00592786 /* Dynamic.swift in Sources */,
 				1E129A8F25BB91AB00CEAF18 /* Owner.swift in Sources */,
+				1E2BF9D025BC9DFA00592786 /* FBRepositoriesViewController.swift in Sources */,
 				1E129A9025BB91AB00CEAF18 /* Repo.swift in Sources */,
 				1ED8A51225BC7CC5008138BE /* APIManager.swift in Sources */,
 				1E129A6325BB7BD700CEAF18 /* AppDelegate.swift in Sources */,
 				1ED8A51825BC7D09008138BE /* RequestManager.swift in Sources */,
+				1E2BF9D525BCA0D500592786 /* FBRepositoriesViewModel.swift in Sources */,
 				1ED8A50E25BC7788008138BE /* ErrorHandler.swift in Sources */,
 				1E129A6525BB7BD700CEAF18 /* SceneDelegate.swift in Sources */,
 				1E129A9125BB91AB00CEAF18 /* License.swift in Sources */,

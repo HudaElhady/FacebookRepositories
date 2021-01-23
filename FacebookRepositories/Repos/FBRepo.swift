@@ -14,9 +14,13 @@ protocol FBRepo {
 
 class FBRepoImpl: FBRepo {
     func getFBRepo(completionHandeler: @escaping (Result<[Repo], ErrorHandler>) -> Void){
-        RequestManager.apiCall(responseModel: [Repo.self], request: .fbRepos) { response in
+        RequestManager.apiCall(request: .fbRepos) { response in
             switch response {
-            case .success(let repos):
+            case .success(let result):
+                guard let repos = try? JSONDecoder().decode([Repo].self, from: result) else {
+                    completionHandeler(.failure(ErrorHandler(code: 200)))
+                    return
+                }
                 completionHandeler(.success(repos))
             case .failure(let error):
                 completionHandeler(.failure(error))

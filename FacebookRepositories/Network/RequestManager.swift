@@ -11,25 +11,20 @@ import Alamofire
 
 class RequestManager{
     
-    static func apiCall<T : Decodable>(responseModel: T.Type, request : APIManager,  completionHandeler: @escaping (Result<T,ErrorHandler>) -> Void) {
+    static func apiCall(request : APIManager,  completionHandeler: @escaping (Result<Data,ErrorHandler>) -> Void) {
         AF.request(request).responseData { (response : AFDataResponse<Data>) in
-            
             guard let statusCode = (response.response?.statusCode)
-                else{
+            else{
                 completionHandeler(.failure(ErrorHandler(code: 500)))
-                    return
+                return
             }
             switch response.result{
             case .success(let result):
-                guard !result.isEmpty else {
+                guard !result.isEmpty, (200...299).contains(statusCode) else {
                     completionHandeler(.failure(ErrorHandler(code: statusCode)))
                     return
                 }
-                    guard (200...299).contains(statusCode), let obj = try? JSONDecoder().decode(T.self, from: result) else {
-                        completionHandeler(.failure(ErrorHandler(code: statusCode)))
-                        return
-                    }
-                    completionHandeler(.success(obj))
+                completionHandeler(.success(result))
             case .failure:
                 completionHandeler(.failure(ErrorHandler(code: statusCode)))
             }
