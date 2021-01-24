@@ -10,6 +10,8 @@
 		1E11FC0925BCD8A000EEB05C /* ActivityIndicator+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E11FC0825BCD8A000EEB05C /* ActivityIndicator+Extension.swift */; };
 		1E11FC1725BD764200EEB05C /* String+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E11FC1625BD764200EEB05C /* String+Extensions.swift */; };
 		1E11FC1D25BD7A5D00EEB05C /* RepoPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E11FC1C25BD7A5D00EEB05C /* RepoPresenter.swift */; };
+		1E11FC2325BDB73000EEB05C /* Reachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E11FC2225BDB73000EEB05C /* Reachability.swift */; };
+		1E11FC2725BDB7F600EEB05C /* SystemUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E11FC2625BDB7F600EEB05C /* SystemUtils.swift */; };
 		1E129A6325BB7BD700CEAF18 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E129A6225BB7BD700CEAF18 /* AppDelegate.swift */; };
 		1E129A6525BB7BD700CEAF18 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E129A6425BB7BD700CEAF18 /* SceneDelegate.swift */; };
 		1E129A6725BB7BD700CEAF18 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E129A6625BB7BD700CEAF18 /* ViewController.swift */; };
@@ -48,6 +50,8 @@
 		1E11FC0825BCD8A000EEB05C /* ActivityIndicator+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "ActivityIndicator+Extension.swift"; path = "../../../../../../ActivityIndicator+Extension.swift"; sourceTree = "<group>"; };
 		1E11FC1625BD764200EEB05C /* String+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extensions.swift"; sourceTree = "<group>"; };
 		1E11FC1C25BD7A5D00EEB05C /* RepoPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepoPresenter.swift; sourceTree = "<group>"; };
+		1E11FC2225BDB73000EEB05C /* Reachability.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reachability.swift; sourceTree = "<group>"; };
+		1E11FC2625BDB7F600EEB05C /* SystemUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SystemUtils.swift; sourceTree = "<group>"; };
 		1E129A5F25BB7BD700CEAF18 /* FacebookRepositories.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FacebookRepositories.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1E129A6225BB7BD700CEAF18 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1E129A6425BB7BD700CEAF18 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -172,6 +176,7 @@
 				1E129A9325BBA67F00CEAF18 /* UI */,
 				1E2BF9D825BCA12C00592786 /* Dynamic.swift */,
 				1E11FC1625BD764200EEB05C /* String+Extensions.swift */,
+				1E11FC2625BDB7F600EEB05C /* SystemUtils.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -219,6 +224,7 @@
 				1ED8A51725BC7D09008138BE /* RequestManager.swift */,
 				1ED8A51125BC7CC4008138BE /* APIManager.swift */,
 				1ED8A50D25BC7788008138BE /* ErrorHandler.swift */,
+				1E11FC2225BDB73000EEB05C /* Reachability.swift */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -421,6 +427,7 @@
 			files = (
 				1ED8A52125BC840E008138BE /* FBRepo.swift in Sources */,
 				1E11FC1D25BD7A5D00EEB05C /* RepoPresenter.swift in Sources */,
+				1E11FC2725BDB7F600EEB05C /* SystemUtils.swift in Sources */,
 				1E129A6725BB7BD700CEAF18 /* ViewController.swift in Sources */,
 				1E129A9525BBA71300CEAF18 /* UIView+Extension.swift in Sources */,
 				1E2BF9D925BCA12C00592786 /* Dynamic.swift in Sources */,
@@ -437,6 +444,7 @@
 				1ED8A50E25BC7788008138BE /* ErrorHandler.swift in Sources */,
 				1E129A6525BB7BD700CEAF18 /* SceneDelegate.swift in Sources */,
 				1E11FC0925BCD8A000EEB05C /* ActivityIndicator+Extension.swift in Sources */,
+				1E11FC2325BDB73000EEB05C /* Reachability.swift in Sources */,
 				1E129A9125BB91AB00CEAF18 /* License.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

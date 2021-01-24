@@ -10,6 +10,7 @@ import Foundation
 import Alamofire
 
 class RequestManager{
+    private static let system = SystemUtilsImpl()
     
     static func apiCall(request : APIManager,  completionHandeler: @escaping (Result<Data,ErrorHandler>) -> Void) {
         AF.request(request).responseData { (response : AFDataResponse<Data>) in
@@ -26,7 +27,8 @@ class RequestManager{
                 }
                 completionHandeler(.success(result))
             case .failure:
-                completionHandeler(.failure(ErrorHandler(code: statusCode)))
+                let code = system.isNetworkRechable() ? 0 : statusCode
+                completionHandeler(.failure(ErrorHandler(code: code)))
             }
         }
     }
