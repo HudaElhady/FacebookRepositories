@@ -161,5 +161,9 @@ struct Repo: Codable {
         case watchers = "watchers"
         case watchersCount = "watchers_count"
     }
+    
+    func toRepoPresenter() -> RepoPresenter {
+        RepoPresenter(name: self.name ?? "", avatarUrl: self.owner?.avatarUrl ?? "", descriptionField: self.descriptionField ?? "", forksCount: "\(self.forksCount ?? 0)", isForked: (self.forksCount ?? 0) == 0)
+    }
 
 }

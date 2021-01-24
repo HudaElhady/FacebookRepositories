@@ -10,7 +10,7 @@ import Foundation
 
 class FBRepositoriesViewModel {
     private var fbRepo : FBRepo
-    var reposArray: Dynamic<[Repo]> = Dynamic([Repo]())
+    var reposArray: Dynamic<[RepoPresenter]> = Dynamic([RepoPresenter]())
     var isLoading: Dynamic<Bool> = Dynamic(false)
     var errorMessage: Dynamic<String> = Dynamic("")
     
@@ -25,7 +25,7 @@ class FBRepositoriesViewModel {
             self?.isLoading.value = false
             switch response{
             case .success(let repos):
-                self?.reposArray.value = repos
+                self?.reposArray.value = repos.map{$0.toRepoPresenter()}
             case.failure(let error):
                 self?.errorMessage.value = error.errorObject.message
             }
