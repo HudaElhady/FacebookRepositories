@@ -13,12 +13,12 @@ struct ErrorHandler : Error {
     
     var errorObject : GeneralError {
         if (200..<300).contains(code) {
-            return GeneralError(code: 0, message:"parsing error")
+            return GeneralError(code: 200, message:"parsing error")
         } else if code == 404 {
-            return GeneralError(code: 0, message: "404 Not found")
+            return GeneralError(code: 404, message: "404 Not found")
         } else if code == 401 {
             
-            return GeneralError(code: 0, message: "session expired please login again")
+            return GeneralError(code: 401, message: "session expired please login again")
         } else {
             return GeneralError(code: 0, message: "Something went wrong")
         }
